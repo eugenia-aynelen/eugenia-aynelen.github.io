@@ -20,49 +20,15 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--nude); color: var(--text); min-height: 100vh; }
 
-  header {
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    padding: 2.5rem 2rem 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  header::before {
-    content: ''; position: absolute; top: -60px; right: -60px;
-    width: 200px; height: 200px; border-radius: 50%;
-    background: var(--rose-light); opacity: 0.5;
-  }
-  header::after {
-    content: ''; position: absolute; bottom: -40px; left: -40px;
-    width: 140px; height: 140px; border-radius: 50%;
-    background: var(--rose-light); opacity: 0.3;
-  }
-  .avatar {
-    width: 80px; height: 80px; border-radius: 50%;
-    background: var(--rose-light); border: 2px solid var(--rose);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px; font-weight: 500; color: var(--rose-dark);
-    margin: 0 auto 1.25rem; position: relative; z-index: 1;
-  }
-  h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem; font-weight: 300; letter-spacing: 0.02em;
-    color: var(--text); margin-bottom: 6px; position: relative; z-index: 1;
-  }
-  .subtitle {
-    font-size: 14px; font-weight: 300; color: var(--text-muted);
-    letter-spacing: 0.06em; text-transform: uppercase;
-    margin-bottom: 1.25rem; position: relative; z-index: 1;
-  }
+  header { background: var(--white); border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; text-align: center; position: relative; overflow: hidden; }
+  header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: var(--rose-light); opacity: 0.5; }
+  header::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 140px; height: 140px; border-radius: 50%; background: var(--rose-light); opacity: 0.3; }
+  .avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--rose-light); border: 2px solid var(--rose); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 500; color: var(--rose-dark); margin: 0 auto 1.25rem; position: relative; z-index: 1; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; letter-spacing: 0.02em; color: var(--text); margin-bottom: 6px; position: relative; z-index: 1; }
+  .subtitle { font-size: 14px; font-weight: 300; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.25rem; position: relative; z-index: 1; }
   .tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; position: relative; z-index: 1; }
   .tag { font-size: 11px; padding: 4px 14px; border-radius: 20px; background: var(--rose-light); color: var(--rose-dark); }
-  .contact-link {
-    font-size: 13px; color: var(--text-muted);
-    display: flex; align-items: center; gap: 6px;
-    justify-content: center; text-decoration: none; position: relative; z-index: 1;
-  }
+  .contact-link { font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; justify-content: center; text-decoration: none; position: relative; z-index: 1; }
   .contact-link:hover { color: var(--rose); }
 
   main { max-width: 860px; margin: 0 auto; padding: 0 1.5rem 4rem; }
@@ -73,10 +39,7 @@
   .about-text { font-size: 15px; font-weight: 300; color: var(--text-muted); line-height: 1.8; max-width: 640px; }
 
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
-  .service-card {
-    background: var(--white); border: 1px solid var(--border);
-    border-radius: 12px; padding: 1.25rem; transition: box-shadow 0.2s;
-  }
+  .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; transition: box-shadow 0.2s; }
   .service-card:hover { box-shadow: 0 4px 20px rgba(201,79,120,0.1); }
   .service-icon { font-size: 22px; color: var(--rose); margin-bottom: 10px; }
   .service-title { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
@@ -93,61 +56,34 @@
   .result-pill { font-size: 11px; padding: 4px 12px; border-radius: 20px; background: var(--nude); color: var(--text-muted); display: flex; align-items: center; gap: 5px; border: 1px solid var(--border); }
   .result-pill span { color: var(--rose); }
 
-  /* VIDEO THUMBNAILS */
   .videos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 12px; }
-  .video-thumb-card {
-    border-radius: 10px; overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    cursor: pointer; position: relative;
-    background: #000;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+  .video-thumb-card { border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; position: relative; background: #000; transition: transform 0.2s, box-shadow 0.2s; }
   .video-thumb-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
   .video-thumb-card:hover .play-overlay { background: rgba(0,0,0,0.3); }
   .thumb-img { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; }
-  .play-overlay {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(0,0,0,0.2);
-    transition: background 0.2s;
-  }
-  .play-btn {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: rgba(255,255,255,0.9);
-    display: flex; align-items: center; justify-content: center;
-  }
+  .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); transition: background 0.2s; }
+  .play-btn { width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: center; }
   .play-btn svg { width: 18px; height: 18px; fill: var(--rose); margin-left: 3px; }
   .video-label { font-size: 11px; font-weight: 300; color: var(--text-muted); padding: 8px 10px; background: var(--white); line-height: 1.4; border-top: 1px solid var(--border); }
 
-  /* LIGHTBOX */
+  /* Wide video for inspo (16:9) */
+  .video-thumb-card.wide .thumb-img { aspect-ratio: 16/9; }
+
   .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 999; align-items: center; justify-content: center; }
   .lightbox.active { display: flex; }
   .lightbox-inner { position: relative; width: 90%; max-width: 380px; }
+  .lightbox-inner.wide-lb { max-width: 640px; }
   .lightbox-inner iframe { width: 100%; aspect-ratio: 9/16; border: none; border-radius: 12px; display: block; }
-  .lightbox-close {
-    position: absolute; top: -40px; right: 0;
-    background: none; border: none; color: white;
-    font-size: 28px; cursor: pointer; line-height: 1;
-  }
+  .lightbox-inner.wide-lb iframe { aspect-ratio: 16/9; }
+  .lightbox-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 28px; cursor: pointer; line-height: 1; }
 
-  .coming-soon {
-    background: var(--white); border: 1px dashed var(--border);
-    border-radius: 10px; padding: 1rem 1.25rem;
-    font-size: 13px; font-weight: 300; color: var(--text-muted);
-    display: flex; align-items: center; gap: 10px;
-  }
+  .coming-soon { background: var(--white); border: 1px dashed var(--border); border-radius: 10px; padding: 1rem 1.25rem; font-size: 13px; font-weight: 300; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
   .coming-soon .dot { color: var(--rose); font-size: 16px; }
 
   .cta-section { background: var(--white); border-radius: 16px; padding: 2.5rem; text-align: center; margin-top: 2.5rem; border: 1px solid var(--border); }
   .cta-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--text); margin-bottom: 8px; }
   .cta-sub { font-size: 13px; font-weight: 300; color: var(--text-muted); margin-bottom: 1.5rem; }
-  .cta-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 28px; border-radius: 30px; background: var(--rose);
-    color: var(--white); font-family: 'DM Sans', sans-serif;
-    font-size: 14px; font-weight: 400; text-decoration: none;
-    border: none; cursor: pointer; transition: background 0.2s, transform 0.1s;
-  }
+  .cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; border-radius: 30px; background: var(--rose); color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.1s; }
   .cta-btn:hover { background: var(--rose-dark); transform: translateY(-1px); }
   .icon { width: 16px; height: 16px; display: inline-block; vertical-align: middle; }
 
@@ -160,9 +96,8 @@
 </head>
 <body>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <div class="lightbox-inner">
+  <div class="lightbox-inner" id="lightbox-inner">
     <button class="lightbox-close" onclick="closeLightbox()">×</button>
     <iframe id="lightbox-iframe" src="" allowfullscreen></iframe>
   </div>
@@ -220,42 +155,42 @@
       </div>
       <div class="videos-grid">
         <div class="video-thumb-card" onclick="openVideo('P_AX1zZscNE')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/P_AX1zZscNE/hqdefault.jpg" alt="Bienvenida nueva cohorte juvenil" onerror="this.src='https://i.ytimg.com/vi/P_AX1zZscNE/mqdefault.jpg'">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/P_AX1zZscNE/hqdefault.jpg" alt="Bienvenida nueva cohorte juvenil">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
           <div class="video-label">Bienvenida nueva cohorte juvenil</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('S01lOprDHSo')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/S01lOprDHSo/hqdefault.jpg" alt="Invitación workshop financiero" onerror="this.src='https://i.ytimg.com/vi/S01lOprDHSo/mqdefault.jpg'">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/S01lOprDHSo/hqdefault.jpg" alt="Invitación workshop financiero">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
           <div class="video-label">Invitación workshop financiero</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('HkaznNlVpKI')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/HkaznNlVpKI/hqdefault.jpg" alt="Invitación workshop comunitario" onerror="this.src='https://i.ytimg.com/vi/HkaznNlVpKI/mqdefault.jpg'">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/HkaznNlVpKI/hqdefault.jpg" alt="Invitación workshop comunitario">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
           <div class="video-label">Invitación workshop comunitario</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('a1jxuPSMV-A')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/a1jxuPSMV-A/hqdefault.jpg" alt="Invitación al programa CNA" onerror="this.src='https://i.ytimg.com/vi/a1jxuPSMV-A/mqdefault.jpg'">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/a1jxuPSMV-A/hqdefault.jpg" alt="Invitación al programa CNA">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
           <div class="video-label">Invitación al programa CNA</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('7FdSNeX3tls')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/7FdSNeX3tls/hqdefault.jpg" alt="Destacados del programa CNA" onerror="this.src='https://i.ytimg.com/vi/7FdSNeX3tls/mqdefault.jpg'">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/7FdSNeX3tls/hqdefault.jpg" alt="Destacados del programa CNA">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
           <div class="video-label">Destacados del programa CNA</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('JbKNuEvjWDQ')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/JbKNuEvjWDQ/hqdefault.jpg" alt="Graduación YouthWorks" onerror="this.src='https://i.ytimg.com/vi/JbKNuEvjWDQ/mqdefault.jpg'">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/JbKNuEvjWDQ/hqdefault.jpg" alt="Graduación YouthWorks">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
           <div class="video-label">Graduación YouthWorks</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('VA0SiSz4GyA')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/VA0SiSz4GyA/hqdefault.jpg" alt="Highlight graduación YouthWorks" onerror="this.src='https://i.ytimg.com/vi/VA0SiSz4GyA/mqdefault.jpg'">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/VA0SiSz4GyA/hqdefault.jpg" alt="Highlight graduación YouthWorks">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
           <div class="video-label">Highlight graduación YouthWorks</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('iBK9qP_CMlQ')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/iBK9qP_CMlQ/hqdefault.jpg" alt="Paint Your Heart Out" onerror="this.src='https://i.ytimg.com/vi/iBK9qP_CMlQ/mqdefault.jpg'">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/iBK9qP_CMlQ/hqdefault.jpg" alt="Paint Your Heart Out">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
           <div class="video-label">Paint Your Heart Out</div>
         </div>
@@ -276,7 +211,23 @@
           <span class="result-pill"><span>👥</span> Lista de espera</span>
         </div>
       </div>
-      <div class="coming-soon"><span class="dot">○</span> Videos próximamente</div>
+      <div class="videos-grid">
+        <div class="video-thumb-card" onclick="openVideo('iunjCn-Ltxk')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/iunjCn-Ltxk/hqdefault.jpg" alt="Prodigy Montessori video 1">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Prodigy Montessori</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('QtMTJFrU3d4')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/QtMTJFrU3d4/hqdefault.jpg" alt="Prodigy Montessori video 2">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Prodigy Montessori</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('g01c4kvL0Bo')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/g01c4kvL0Bo/hqdefault.jpg" alt="Prodigy Montessori Tour">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Prodigy Montessori Tour</div>
+        </div>
+      </div>
     </div>
 
     <!-- Tina's Childcare -->
@@ -292,7 +243,23 @@
           <span class="result-pill"><span>📣</span> Estrategia orgánica + paga</span>
         </div>
       </div>
-      <div class="coming-soon"><span class="dot">○</span> Videos próximamente</div>
+      <div class="videos-grid">
+        <div class="video-thumb-card" onclick="openVideo('exQ4LJZ81O8')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/exQ4LJZ81O8/hqdefault.jpg" alt="Tina's Childcare">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Tina's Childcare</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('cM2asZzgB68')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/cM2asZzgB68/hqdefault.jpg" alt="Inside Tina's Childcare">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Inside Tina's Childcare</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('MIccQ85B-4A')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/MIccQ85B-4A/hqdefault.jpg" alt="Ad Tina's Childcare">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Ad Tina's Childcare</div>
+        </div>
+      </div>
     </div>
 
     <!-- Magnolia Academy -->
@@ -309,7 +276,38 @@
           <span class="result-pill"><span>🤝</span> Patrocinios</span>
         </div>
       </div>
-      <div class="coming-soon"><span class="dot">○</span> Videos próximamente</div>
+      <div class="videos-grid">
+        <div class="video-thumb-card" onclick="openVideo('s--z00YAh0k')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/s--z00YAh0k/hqdefault.jpg" alt="Magnolia Academy">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Magnolia Academy</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('20kFjcgM-qo')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/20kFjcgM-qo/hqdefault.jpg" alt="Magnolia Academy">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Magnolia Academy</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('2g2Zkz6QBoQ')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/2g2Zkz6QBoQ/hqdefault.jpg" alt="Magnolia Academy">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Magnolia Academy</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('HZL4_a655fY')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/HZL4_a655fY/hqdefault.jpg" alt="Magnolia Academy">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Magnolia Academy</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('rceImrTzXBk')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/rceImrTzXBk/hqdefault.jpg" alt="Magnolia Academy">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Magnolia Academy</div>
+        </div>
+        <div class="video-thumb-card" onclick="openVideo('CS6oj5Izv7Q')">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/CS6oj5Izv7Q/hqdefault.jpg" alt="Magnolia Academy">
+          <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+          <div class="video-label">Magnolia Academy</div>
+        </div>
+      </div>
     </div>
 
     <!-- Iglesia -->
@@ -330,6 +328,78 @@
 
   </section>
 
+  <!-- WHAT I CAN CREATE FOR YOU -->
+  <section>
+    <div class="section-label">What I Can Create For You</div>
+    <div class="videos-grid">
+      <div class="video-thumb-card wide" onclick="openVideo('mb0JxbUVwHg', true)">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/mb0JxbUVwHg/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Professional business content</div>
+      </div>
+      <div class="video-thumb-card wide" onclick="openVideo('QloZ2OE5s0o', true)">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/QloZ2OE5s0o/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card wide" onclick="openVideo('2elXcxWhvAo', true)">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/2elXcxWhvAo/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card wide" onclick="openVideo('d0YW0Nb7ddU', true)">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/d0YW0Nb7ddU/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card wide" onclick="openVideo('QgVnNhSr0hw', true)">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/QgVnNhSr0hw/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card wide" onclick="openVideo('kV7FixBxCmM', true)">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/kV7FixBxCmM/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card" onclick="openVideo('Z1VgDBsqjWk')">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/Z1VgDBsqjWk/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card" onclick="openVideo('o_r4R_PoGbI')">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/o_r4R_PoGbI/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card" onclick="openVideo('vmUAgvuyZUE')">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/vmUAgvuyZUE/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card" onclick="openVideo('RsPvZSNMPOI')">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/RsPvZSNMPOI/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card" onclick="openVideo('7esCBJ6i4rc')">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/7esCBJ6i4rc/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card" onclick="openVideo('gXFjLAJLQzQ')">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/gXFjLAJLQzQ/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+      <div class="video-thumb-card" onclick="openVideo('dVr4inKx5Gs')">
+        <img class="thumb-img" src="https://i.ytimg.com/vi/dVr4inKx5Gs/hqdefault.jpg" alt="Content inspiration">
+        <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <div class="video-label">Content inspiration</div>
+      </div>
+    </div>
+  </section>
+
   <div class="cta-section">
     <div class="cta-title">¿Trabajamos juntos?</div>
     <div class="cta-sub">Contame tu proyecto y armamos una estrategia a medida.</div>
@@ -342,7 +412,9 @@
 </main>
 
 <script>
-function openVideo(id) {
+function openVideo(id, wide) {
+  var inner = document.getElementById('lightbox-inner');
+  if (wide) { inner.classList.add('wide-lb'); } else { inner.classList.remove('wide-lb'); }
   document.getElementById('lightbox-iframe').src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
   document.getElementById('lightbox').classList.add('active');
 }
@@ -352,9 +424,7 @@ function closeLightbox(e) {
     document.getElementById('lightbox').classList.remove('active');
   }
 }
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
 </body>
