@@ -80,6 +80,27 @@
   .coming-soon { background: var(--white); border: 1px dashed var(--border); border-radius: 10px; padding: 1rem 1.25rem; font-size: 13px; font-weight: 300; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
   .coming-soon .dot { color: var(--rose); font-size: 16px; }
 
+  .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 16px; }
+  .plan-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; }
+  .plan-name { font-size: 13px; font-weight: 500; color: var(--rose); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .plan-price { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--text); margin-bottom: 16px; }
+  .plan-price span { font-size: 14px; color: var(--text-muted); font-family: 'DM Sans', sans-serif; font-weight: 300; }
+  .plan-list { list-style: none; padding: 0; margin: 0; }
+  .plan-list li { font-size: 13px; font-weight: 300; color: var(--text-muted); padding: 6px 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+  .plan-list li::before { content: "✓"; color: var(--rose); font-size: 12px; flex-shrink: 0; margin-top: 2px; }
+  .plan-list li:last-child { border-bottom: none; }
+  .extra-content { background: var(--nude); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 12px; }
+  .extra-title { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+  .extra-title span { color: var(--rose); }
+  .extra-desc { font-size: 12px; font-weight: 300; color: var(--text-muted); }
+  .custom-plan { background: var(--rose-light); border-radius: 10px; padding: 1rem 1.25rem; display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
+  .custom-icon { font-size: 20px; flex-shrink: 0; }
+  .custom-title { font-size: 14px; font-weight: 500; color: var(--rose-dark); margin-bottom: 4px; }
+  .custom-desc { font-size: 12px; font-weight: 300; color: var(--text-muted); line-height: 1.6; }
+  .payment-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .payment-label { font-size: 12px; color: var(--text-muted); }
+  .payment-badge { font-size: 11px; padding: 4px 12px; border-radius: 20px; background: var(--white); border: 1px solid var(--border); color: var(--text-muted); }
+
   .cta-section { background: var(--white); border-radius: 16px; padding: 2.5rem; text-align: center; margin-top: 2.5rem; border: 1px solid var(--border); }
   .cta-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--text); margin-bottom: 8px; }
   .cta-sub { font-size: 13px; font-weight: 300; color: var(--text-muted); margin-bottom: 1.5rem; }
@@ -109,9 +130,9 @@
   <div class="subtitle">Digital Content Creator &amp; Social Media Manager</div>
   <div class="tags">
     <span class="tag">Video content</span>
-    <span class="tag">Redes sociales</span>
-    <span class="tag">Marketing digital</span>
-    <span class="tag">Estrategia orgánica &amp; paga</span>
+    <span class="tag">Social Media</span>
+    <span class="tag">Digital Marketing</span>
+    <span class="tag">Organic &amp; Paid Strategy</span>
   </div>
   <a class="contact-link" href="mailto:eugenia.digitalmarketing@gmail.com">
     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
@@ -122,72 +143,72 @@
 <main>
 
   <section>
-    <div class="section-label">Sobre mí</div>
-    <p class="about-text">Soy creadora de contenido digital y social media manager con experiencia trabajando con emprendimientos desde cero hasta posicionarse como líderes en su sector. Trabajo con empresas medianas, startups y organizaciones comunitarias, combinando estrategia orgánica, publicidad paga y contenido en video. Actualmente cursando un Bachelor en Digital Marketing.</p>
+    <div class="section-label">About Me</div>
+    <p class="about-text">I am a digital content creator and social media manager with experience taking businesses from zero to industry leaders. I work with medium-sized businesses, startups, and community organizations, combining organic strategy, paid advertising, and video content. Currently pursuing a Bachelor's degree in Digital Marketing.</p>
   </section>
 
   <section>
-    <div class="section-label">Servicios</div>
+    <div class="section-label">Services</div>
     <div class="services-grid">
-      <div class="service-card"><div class="service-icon">🎬</div><div class="service-title">Video content</div><div class="service-desc">Reels, stories y videos con propósito estratégico para cada plataforma.</div></div>
-      <div class="service-card"><div class="service-icon">📱</div><div class="service-title">Social media</div><div class="service-desc">Gestión integral de redes, planificación, publicación y crecimiento de comunidad.</div></div>
-      <div class="service-card"><div class="service-icon">📣</div><div class="service-title">Publicidad paga</div><div class="service-desc">Campañas en Meta Ads con estrategia de segmentación y resultados medibles.</div></div>
-      <div class="service-card"><div class="service-icon">🎨</div><div class="service-title">Identidad visual</div><div class="service-desc">Armonización de perfil, feed y stories para una presencia coherente y atractiva.</div></div>
+      <div class="service-card"><div class="service-icon">🎬</div><div class="service-title">Video content</div><div class="service-desc">Reels, stories, and videos with a strategic purpose for each platform.</div></div>
+      <div class="service-card"><div class="service-icon">📱</div><div class="service-title">Social Media</div><div class="service-desc">Full social media management: planning, publishing, and community growth.</div></div>
+      <div class="service-card"><div class="service-icon">📣</div><div class="service-title">Paid Advertising</div><div class="service-desc">Meta Ads campaigns with targeted strategy and measurable results.</div></div>
+      <div class="service-card"><div class="service-icon">🎨</div><div class="service-title">Visual Identity</div><div class="service-desc">Profile, feed, and stories harmonization for a cohesive and attractive presence.</div></div>
     </div>
   </section>
 
   <section>
-    <div class="section-label">Clientes &amp; Trabajos</div>
+    <div class="section-label">Clients &amp; Work</div>
 
     <!-- NeighborWorks -->
     <div class="client-block">
       <div class="client-card">
         <div class="client-header">
           <div class="client-name">NeighborWorks Salt Lake</div>
-          <span class="client-type">Sin fines de lucro</span>
+          <span class="client-type">Non-profit</span>
         </div>
-        <div class="client-desc">Humanización del perfil mostrando al equipo, videos con coordinadores y testimonios explicando sus programas, newsletters y apoyo en la página web.</div>
+        <div class="client-desc">Profile humanization showcasing the team, coordinator videos and testimonials explaining their programs, newsletters, and website support.</div>
         <div class="result-row">
-          <span class="result-pill"><span>♥</span> Contenido humano</span>
-          <span class="result-pill"><span>▶</span> Videos testimoniales</span>
+          <span class="result-pill"><span>♥</span> Human content</span>
+          <span class="result-pill"><span>▶</span> Testimonial videos</span>
           <span class="result-pill"><span>✉</span> Newsletter</span>
         </div>
       </div>
       <div class="videos-grid">
         <div class="video-thumb-card" onclick="openVideo('P_AX1zZscNE')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/P_AX1zZscNE/hqdefault.jpg" alt="Bienvenida nueva cohorte juvenil">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/P_AX1zZscNE/hqdefault.jpg" alt="Welcoming new youth cohort">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-          <div class="video-label">Bienvenida nueva cohorte juvenil</div>
+          <div class="video-label">Welcoming new youth cohort</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('S01lOprDHSo')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/S01lOprDHSo/hqdefault.jpg" alt="Invitación workshop financiero">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/S01lOprDHSo/hqdefault.jpg" alt="Financial workshop invitation">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-          <div class="video-label">Invitación workshop financiero</div>
+          <div class="video-label">Financial workshop invitation</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('HkaznNlVpKI')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/HkaznNlVpKI/hqdefault.jpg" alt="Invitación workshop comunitario">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/HkaznNlVpKI/hqdefault.jpg" alt="Community workshop invitation">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-          <div class="video-label">Invitación workshop comunitario</div>
+          <div class="video-label">Community workshop invitation</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('a1jxuPSMV-A')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/a1jxuPSMV-A/hqdefault.jpg" alt="Invitación al programa CNA">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/a1jxuPSMV-A/hqdefault.jpg" alt="Invitation to CNA program">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-          <div class="video-label">Invitación al programa CNA</div>
+          <div class="video-label">Invitation to CNA program</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('7FdSNeX3tls')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/7FdSNeX3tls/hqdefault.jpg" alt="Destacados del programa CNA">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/7FdSNeX3tls/hqdefault.jpg" alt="CNA program highlights">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-          <div class="video-label">Destacados del programa CNA</div>
+          <div class="video-label">CNA program highlights</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('JbKNuEvjWDQ')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/JbKNuEvjWDQ/hqdefault.jpg" alt="Graduación YouthWorks">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/JbKNuEvjWDQ/hqdefault.jpg" alt="YouthWorks Graduation">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-          <div class="video-label">Graduación YouthWorks</div>
+          <div class="video-label">YouthWorks Graduation</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('VA0SiSz4GyA')">
-          <img class="thumb-img" src="https://i.ytimg.com/vi/VA0SiSz4GyA/hqdefault.jpg" alt="Highlight graduación YouthWorks">
+          <img class="thumb-img" src="https://i.ytimg.com/vi/VA0SiSz4GyA/hqdefault.jpg" alt="YouthWorks Graduation Highlight">
           <div class="play-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-          <div class="video-label">Highlight graduación YouthWorks</div>
+          <div class="video-label">YouthWorks Graduation Highlight</div>
         </div>
         <div class="video-thumb-card" onclick="openVideo('iBK9qP_CMlQ')">
           <img class="thumb-img" src="https://i.ytimg.com/vi/iBK9qP_CMlQ/hqdefault.jpg" alt="Paint Your Heart Out">
@@ -204,11 +225,11 @@
           <div class="client-name">Prodigy Montessori</div>
           <span class="client-type">Daycare &amp; Preschool</span>
         </div>
-        <div class="client-desc">Empezamos juntas desde cero. Hoy son líderes en su sector en Saratoga Springs, UT — con lista de espera en menos de 3 años.</div>
+        <div class="client-desc">We started from scratch together. Today they are industry leaders in Saratoga Springs, UT — with a waitlist in less than 3 years.</div>
         <div class="result-row">
-          <span class="result-pill"><span>↑</span> Líderes del sector</span>
-          <span class="result-pill"><span>⏱</span> Menos de 3 años</span>
-          <span class="result-pill"><span>👥</span> Lista de espera</span>
+          <span class="result-pill"><span>↑</span> Industry leaders</span>
+          <span class="result-pill"><span>⏱</span> Less than 3 years</span>
+          <span class="result-pill"><span>👥</span> Waitlist</span>
         </div>
       </div>
       <div class="videos-grid">
@@ -235,12 +256,12 @@
       <div class="client-card">
         <div class="client-header">
           <div class="client-name">Tina's Childcare</div>
-          <span class="client-type">Emprendimiento</span>
+          <span class="client-type">Business</span>
         </div>
-        <div class="client-desc">Estrategia de marketing desde el inicio — orgánica y publicidad paga. En 1 año el negocio ya era rentable y generaba ingresos consistentes.</div>
+        <div class="client-desc">Marketing strategy from the start — organic and paid. Within 1 year the business was profitable and generating consistent revenue.</div>
         <div class="result-row">
-          <span class="result-pill"><span>↑</span> Rentable en 1 año</span>
-          <span class="result-pill"><span>📣</span> Estrategia orgánica + paga</span>
+          <span class="result-pill"><span>↑</span> Profitable in 1 year</span>
+          <span class="result-pill"><span>📣</span> Organic + paid strategy</span>
         </div>
       </div>
       <div class="videos-grid">
@@ -269,11 +290,11 @@
           <div class="client-name">Magnolia Academy</div>
           <span class="client-type">Internship</span>
         </div>
-        <div class="client-desc">Contenido diario en IG, mejora visual del perfil, armonización del feed y generación de conexiones con posibles patrocinadores.</div>
+        <div class="client-desc">Daily content on IG, visual profile improvement, feed harmonization, and building connections with potential sponsors.</div>
         <div class="result-row">
-          <span class="result-pill"><span>🎨</span> Rediseño visual</span>
-          <span class="result-pill"><span>📅</span> Contenido diario</span>
-          <span class="result-pill"><span>🤝</span> Patrocinios</span>
+          <span class="result-pill"><span>🎨</span> Visual redesign</span>
+          <span class="result-pill"><span>📅</span> Daily content</span>
+          <span class="result-pill"><span>🤝</span> Sponsorships</span>
         </div>
       </div>
       <div class="videos-grid">
@@ -315,15 +336,15 @@
       <div class="client-card">
         <div class="client-header">
           <div class="client-name">Iglesia / Comunidad</div>
-          <span class="client-type">Voluntariado</span>
+          <span class="client-type">Volunteer</span>
         </div>
-        <div class="client-desc">Video de invitación para actividad cultural comunitaria.</div>
+        <div class="client-desc">Invitation video for a community cultural event.</div>
         <div class="result-row">
-          <span class="result-pill"><span>▶</span> Video evento</span>
-          <span class="result-pill"><span>👥</span> Comunidad</span>
+          <span class="result-pill"><span>▶</span> Event video</span>
+          <span class="result-pill"><span>👥</span> Community</span>
         </div>
       </div>
-      <div class="coming-soon"><span class="dot">○</span> Video próximamente</div>
+      <div class="coming-soon"><span class="dot">○</span> Video coming soon</div>
     </div>
 
   </section>
@@ -400,9 +421,58 @@
     </div>
   </section>
 
+  <section>
+    <div class="section-label">Investment</div>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-name">Full Management</div>
+        <div class="plan-price">$1,000<span>/month</span></div>
+        <ul class="plan-list">
+          <li>3x Stories per week (Mon, Wed, Fri)</li>
+          <li>1 Photo post or Carousel per week</li>
+          <li>1 Reel per week</li>
+          <li>Photo/video shoot sessions</li>
+          <li>Community engagement</li>
+          <li>Monthly performance report</li>
+          <li>Content calendar</li>
+          <li>Custom hashtag strategy</li>
+          <li>Response to comments &amp; DMs</li>
+          <li>Paid ads management (budget paid by client)</li>
+        </ul>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Basic Management</div>
+        <div class="plan-price">$500<span>/month</span></div>
+        <ul class="plan-list">
+          <li>1 Photo post, Carousel, Video, or Reel per week</li>
+          <li>2 Stories per week</li>
+          <li>Content calendar</li>
+          <li>Community engagement</li>
+        </ul>
+      </div>
+    </div>
+    <div class="extra-content">
+      <div class="extra-title">Special Events &amp; Extra Content — <span>$100 per piece</span></div>
+      <div class="extra-desc">Additional reels, carousels, stories, or event coverage billed separately.</div>
+    </div>
+    <div class="custom-plan">
+      <div class="custom-icon">💬</div>
+      <div>
+        <div class="custom-title">Need something different?</div>
+        <div class="custom-desc">I'm open to building a custom plan that works for both of us. Reach out and let's talk about what your business needs.</div>
+      </div>
+    </div>
+    <div class="payment-row">
+      <span class="payment-label">Payment:</span>
+      <span class="payment-badge">Cash</span>
+      <span class="payment-badge">Venmo</span>
+      <span class="payment-badge">Zelle</span>
+    </div>
+  </section>
+
   <div class="cta-section">
-    <div class="cta-title">¿Trabajamos juntos?</div>
-    <div class="cta-sub">Contame tu proyecto y armamos una estrategia a medida.</div>
+    <div class="cta-title">Let's work together!</div>
+    <div class="cta-sub">Tell me about your project and we'll build a custom strategy.</div>
     <a class="cta-btn" href="mailto:eugenia.digitalmarketing@gmail.com">
       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
       eugenia.digitalmarketing@gmail.com
