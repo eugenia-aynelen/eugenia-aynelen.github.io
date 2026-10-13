@@ -45,6 +45,84 @@
   .post-body { font-size: 15px; font-weight: 300; color: var(--text-muted); line-height: 1.85; }
   .post-body p { margin-bottom: 1rem; }
   .post-body p:last-child { margin-bottom: 0; }
+
+  /* PULL QUOTE */
+  .pull-quote {
+    border-left: 3px solid var(--rose);
+    margin: 1.75rem 0;
+    padding: 1rem 1.5rem;
+    background: var(--rose-light);
+    border-radius: 0 12px 12px 0;
+  }
+  .pull-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--rose-dark);
+    line-height: 1.6;
+    margin: 0 !important;
+  }
+
+  /* ICON BREAK */
+  .icon-break {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 1.75rem 0;
+    color: var(--rose);
+  }
+  .icon-break::before,
+  .icon-break::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .icon-break span { font-size: 16px; }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: var(--nude);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.75rem 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .highlight-box strong {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 6px;
+  }
+
+  /* PHOTO BANNER */
+  .post-banner {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    display: block;
+  }
+  .post-banner-placeholder {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--rose-light) 0%, #f0e0ea 100%);
+  }
 </style>
 </head>
 <body>
@@ -72,6 +150,7 @@
     <div class="post-body">
       <p>Growing up with early exposure to the values and teachings found in Article of Faith 13 has made it easier for me to guide my own actions today. Having those principles instilled in me from a young age gives me a natural filter for the decisions I make, especially when it comes to content.</p>
       <p>I saw this play out recently in a real situation. I went through a difficult experience with someone who was both a friend and a work partner, and things didn't end well professionally. In moments like that, it can be tempting to use social media to vent or let everyone know what's going on. But instead, I chose to keep the harder, messier parts of the situation private, and to only share things on my platforms that add value and influence people positively.</p>
+      <div class="pull-quote"><p>"I chose to keep the harder, messier parts private — and to only share things that add value and influence people positively."</p></div>
       <p>That choice didn't come from nowhere — it came from those early teachings about seeking what is virtuous, lovely, of good report, and praiseworthy. When I create my own content, this foundation helps everything come out organized and genuine, because I'm filtering it through those same values instead of raw emotion.</p>
       <p>The same applies to what I consume. Article of Faith 13 reminds me to be selective about what I let into my mind, and that standard shapes not only what I post, but what I choose to engage with from others too.</p>
     </div>
@@ -85,6 +164,7 @@
     <div class="post-body">
       <p>If you had asked me years ago which platform would still be relevant today, I'm not sure Instagram would have been my first guess. But here we are — and honestly, the growth this app has had over the last few years is impressive.</p>
       <p>For me, Instagram is the most powerful platform out there right now. It's not just for creators or brands anymore; it has become part of everyday life for millions of people.</p>
+      <div class="post-banner-placeholder">📱</div>
       <p>One thing that really adds value and connection for me is watching how Adam Mosseri, the head of Instagram, shows up on the platform himself. He's constantly active, putting a real face behind the company, walking users through new updates, and — my favorite part — actually listening. He uses question boxes to hear directly from users about their problems, and you can see the platform evolve based on that feedback. That kind of transparency builds a lot of trust, and I think it's a huge part of why the app keeps growing.</p>
       <p>Beyond that, what makes Instagram so powerful is its ability to give people a highlight of something and then send them somewhere deeper — a reel that drives you to a full YouTube episode, a story that links to a website, or a product tag that takes you straight to checkout on Amazon. It's quick and visual, but it also knows how to guide people toward action.</p>
       <p>For creators like me, that combination of connection, transparency, and functionality is exactly why Instagram remains at the top of the list.</p>
@@ -99,6 +179,7 @@
     <div class="post-body">
       <p>If the Book of Mormon had many grammatical errors, I believe it could be a problem for some people, but not for everyone. For many readers, the Spirit they feel while reading and studying the text is more powerful than any grammatical imperfection. When someone reads with sincere intent and an open heart, the message can still touch them deeply, even if the wording is not perfect.</p>
       <p>However, scholars and academics may easily focus on such imperfections as grounds for criticism. They often focus on the technical side of writing — structure, style, and correctness — so mistakes could give them a reason to question the book's credibility or dismiss its message without truly considering its spiritual value.</p>
+      <div class="highlight-box"><strong>Key Takeaway</strong>Good writing removes barriers. The cleaner and clearer your words, the more people can receive the message — without getting distracted by the delivery.</div>
       <p>This makes me think about how writing works in two different ways. On one side, there is the emotional and spiritual power of a message. On the other side, there is the professional expectation of clean, correct writing. Both matter, but I believe that for something as sacred as scripture, the spirit behind the words can carry more weight than perfect grammar.</p>
       <p>Still, this reminds me why learning to write well is so important — it helps remove barriers so more people can receive the message clearly, without distraction.</p>
     </div>
@@ -111,8 +192,163 @@
     <div class="post-divider"></div>
     <div class="post-body">
       <p>Writing has played a very important role in my life. I have always found it easier to express myself in writing than in speech, especially when it comes to my feelings. When I could not find the right words to say out loud, I would take the time to write little letters or notes instead — to ask for forgiveness, to express love, to share my worries, or simply to say things I did not know how to say face-to-face.</p>
+      <div class="pull-quote"><p>"Writing gave me the courage to be honest in a way that speaking never could."</p></div>
       <p>I remember many moments when writing gave me the courage to be honest in a way that speaking never could. There is something about putting my thoughts on paper that makes everything feel clearer and calmer. It gives me time to think, to choose my words carefully, and to say exactly what is in my heart.</p>
       <p>For me, writing is not just a skill; it is beautiful and therapeutic. It has helped me heal, connect with others, and understand myself better. I believe many people feel the same way, even if they don't always realize it. Writing has a quiet power to say what our voice sometimes cannot.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Service & Community</div>
+    <h2 class="post-title">A Quiet Way to Serve</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>When I think about service, I used to picture big, visible acts — organizing an event, leading a project, being recognized for doing something good. But over time I have learned that some of the most meaningful service happens quietly, in ways that most people never see.</p>
+      <p>Last week I helped a neighbor carry groceries to her apartment. It took me maybe three minutes. She thanked me in a way that made it clear no one had done something like that for her in a while. That small moment stayed with me all day.</p>
+      <div class="icon-break"><span>✦</span></div>
+      <p>As someone who works in communication and content creation, I think a lot about how we tell stories of service. Often the stories that go viral are the dramatic ones — the huge donation, the surprise reunion, the gesture that made someone cry on camera. And while those are beautiful, I wonder if they sometimes make everyday service feel too ordinary to mention.</p>
+      <p>But ordinary service is what keeps communities together. It is the person who stays after the meeting to stack the chairs. The neighbor who shovels the walk without being asked. The coworker who notices you are overwhelmed and quietly covers one thing so you can breathe.</p>
+      <p>I want to be better at noticing those moments — both in my own life and in the stories I help tell. The quiet ones matter too.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Writing & Communication</div>
+    <h2 class="post-title">The Newsletter That Taught Me More Than Communication</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>In one of my communication courses, we were asked to subscribe to a professional newsletter and analyze it over the course of a few weeks. I chose one focused on digital marketing trends, mostly because it felt practical for the career I am building.</p>
+      <p>What I did not expect was how much the newsletter would teach me beyond its actual content.</p>
+      <p>The writing was clear and consistent. Every issue had the same structure — a short opening with a personal note, three main topics with brief analysis, and a closing recommendation. It never tried to cover everything. It trusted the reader to do more research if they wanted to go deeper.</p>
+      <div class="highlight-box"><strong>The Lesson</strong>Good communication is not about saying more — it is about knowing what to leave out. One clear message beats five scattered ones every time.</div>
+      <p>That restraint impressed me. In a world where content often tries to be comprehensive, this newsletter chose to be useful instead. And because of that, I actually read it. Every time.</p>
+      <p>It reminded me that good communication is not about saying more. It is about knowing what to leave out. The writer had a clear sense of what their audience needed each week, and they stuck to it — even when there was probably more they could have added.</p>
+      <p>Now when I write, I try to ask myself: what is the one thing this person actually needs to walk away with? Everything else is extra.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Storytelling & Media</div>
+    <h2 class="post-title">Compassion in Every Story</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>One of the things I have come to believe strongly as a content creator is that compassion is not optional in storytelling — it is the foundation of it.</p>
+      <p>When we tell someone's story, we are holding something fragile. People trust us with their experiences, their vulnerabilities, their truth. And what we do with that trust shapes not only how they are perceived, but how they feel about having shared at all.</p>
+      <div class="pull-quote"><p>"How would this person feel watching this? Would they feel seen and respected — or would they feel like their pain was used for someone else's engagement?"</p></div>
+      <p>I have worked with nonprofits and community organizations where the people being featured were going through real hardship. It would have been easy to emphasize the difficulty to make the content more emotional or more shareable. But I always ask myself: how would this person feel watching this? Would they feel seen and respected, or would they feel like their pain was used for someone else's engagement?</p>
+      <p>That question changes everything about the way I work.</p>
+      <p>Compassionate storytelling does not mean avoiding hard truths. It means approaching people with dignity, being honest about context, and never reducing someone's full humanity to a headline or a thumbnail.</p>
+      <p>The best content I have ever created started with genuinely caring about the people in it. And I think audiences can feel that difference, even if they cannot name it.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Media & Journalism</div>
+    <h2 class="post-title">Being First vs. Being Accurate: A Lesson Argentina Won't Forget</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>There is a phrase in journalism that gets repeated so often it has almost become a cliché: "get it first, but first get it right." The problem is that the pressure to be first often wins — and Argentina has experienced the consequences of that more than once.</p>
+      <p>One of the most well-known cases happened during a national political crisis, when several major news outlets rushed to report information that turned out to be inaccurate. The correction came later, but by then the damage was done. People had already formed opinions, made decisions, and spread the false story further.</p>
+      <div class="post-banner-placeholder">📰</div>
+      <p>Growing up between two cultures — Argentina and the United States — I have seen how differently media environments handle this tension. In both places, speed is rewarded. But the cost of error is not always paid the same way.</p>
+      <p>As someone studying communication and working in content creation, this is something I think about often. Social media has made the pressure to be first almost unbearable. A story can travel around the world in minutes, and being the one to break it feels like a win — until it isn't.</p>
+      <p>I have made a personal commitment in my own work: I would rather be slower and right than fast and wrong. Credibility is not something you can recover quickly. And in a world where trust in media is already fragile, accuracy is one of the few things we have left to protect.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Personal Reflection</div>
+    <h2 class="post-title">A New Page Every Day</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>I have kept some version of a journal for most of my adult life. Not always consistently — there have been seasons where I went weeks without writing a single word. But I always come back to it.</p>
+      <p>What journaling has taught me most is that every day really is a new page. Not in a motivational-poster kind of way, but in a very practical one. When I write at the end of the day, I can see how different it was from the one before — what shifted, what surprised me, what I am still carrying that I thought I had let go.</p>
+      <div class="icon-break"><span>✦</span></div>
+      <p>It has also made me a better writer in every other area of my life. Journaling is the place where I am not trying to be polished or impressive. I am just trying to be honest. And that practice of honesty — of saying what I actually mean without worrying about how it sounds — has slowly made its way into my professional writing too.</p>
+      <p>I think of journaling as the behind-the-scenes work that makes the final product better. No one sees it, but it is always there, building something.</p>
+      <p>If you have ever thought about starting, I would just say: do not wait until you have something important to write about. The ordinary days are the ones worth capturing. Those are the ones you forget first.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Digital Marketing</div>
+    <h2 class="post-title">What Consistency Does to the Brain</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>When I first started managing social media accounts, I thought the most important thing was the quality of each individual post. If the photo was beautiful and the caption was clever, the account would grow. Simple enough.</p>
+      <p>It took me longer than I would like to admit to understand that consistency matters more than almost anything else.</p>
+      <p>There is actually a psychological reason for this. Our brains are pattern-recognition machines. When we encounter something regularly — whether it is a person, a brand, or a piece of content — we start to trust it. Familiarity builds comfort, and comfort builds loyalty. This is why even mediocre brands that show up consistently can outperform exceptional ones that post sporadically.</p>
+      <div class="highlight-box"><strong>Remember This</strong>Familiarity builds comfort. Comfort builds loyalty. A consistent presence — even an imperfect one — will always beat a brilliant one that disappears.</div>
+      <p>For my clients, I talk about this often. It can feel discouraging to put out content that does not immediately perform well. But if you keep showing up — same voice, same values, same general rhythm — something shifts over time. People start to expect you. And expectation is a powerful thing.</p>
+      <p>Consistency is also what builds your own skills as a creator. The more you practice writing captions or filming short videos or editing graphics, the better you get. Not because of any single great post, but because of the hundreds of ordinary ones that came before it.</p>
+      <p>Show up. Keep showing up. The results come later.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Social Media & Values</div>
+    <h2 class="post-title">Treat Your Screen Like You Treat People</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>There is a version of people online that sometimes does not resemble them at all in real life. Online, they argue. They mock. They say things with a confidence and cruelty that they would never deliver face to face. And I understand why — the screen creates distance, and distance makes it easier to forget that there is a real person on the other side.</p>
+      <p>I grew up being taught to treat people with respect and kindness, and I have tried to carry that into my digital life. For me, the screen is not a wall. It is a window. On the other side of every comment section, every DM, every post I create — there are people. People with feelings and context and whole lives I know nothing about.</p>
+      <div class="pull-quote"><p>"The habits we build online shape the people we become offline. Kindness behind the screen is not a strategy — it is character."</p></div>
+      <p>When I manage accounts for clients, I take this seriously. How we respond to comments — especially critical ones — says something about who we are. A dismissive reply to a frustrated customer, a passive-aggressive caption, a story posted in anger — these things linger. Screenshots exist. Audiences notice.</p>
+      <p>But beyond strategy, I think there is something deeper at stake. The habits we build online shape the people we become offline. If we train ourselves to be reactive and unkind in digital spaces, that does not stay neatly contained behind the screen.</p>
+      <p>Treating your screen like you treat people is not just good social media practice. It is good character practice.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Writing & Communication</div>
+    <h2 class="post-title">Writing for Yourself, Writing for Others</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>There is a difference between writing for yourself and writing for an audience, and learning to move between those two modes has been one of the most valuable things I have developed as a communicator.</p>
+      <p>When I write for myself — in a journal, in a personal note, in a draft I never send — I write to understand. I am not performing. I am processing. The sentences do not need to be graceful. They just need to be honest. This kind of writing is for me, and its only job is to help me think.</p>
+      <div class="icon-break"><span>✦</span></div>
+      <p>When I write for others, everything shifts. Now I am thinking about the person on the receiving end. What do they already know? What do they need to feel? What action, if any, do I want them to take when they are done reading? The words still need to be honest — maybe more than ever — but they also need to be shaped in a way that serves someone else.</p>
+      <p>What I have found is that the best writing for others still starts with writing for yourself. If I do not understand what I am trying to say, my audience will not either. The clarity has to come first, internally, before I can translate it outward.</p>
+      <p>This is something I try to remember when I write captions or scripts or blog posts for clients. Before I ask "what will this person want to hear?" I ask "what is actually true?" The answer to the first question is always better when it starts from the second.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Faith & Values</div>
+    <h2 class="post-title">Deciding Today to Stay Faithful</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>One of the things I have learned about faith — both in a spiritual sense and in a broader one — is that it is not a decision you make once. It is a decision you make every day. Sometimes multiple times a day.</p>
+      <p>There are mornings when being faithful to my values feels natural and easy. And then there are the harder days, when I am tired or disappointed or facing something I did not choose, and choosing faithfulness requires something more deliberate.</p>
+      <div class="post-banner-placeholder">🌿</div>
+      <p>I think about this in the context of my work too. Staying faithful to the standards I have set for my content — not taking shortcuts, not saying what I think people want to hear at the expense of honesty, not letting fear of low engagement push me toward content I do not believe in — that requires a decision. Often the same decision, repeated.</p>
+      <p>What helps me is remembering why I set those standards in the first place. When I go back to the root of my values — my faith, my family, the person I am trying to become — it becomes easier to hold the line on the smaller daily choices.</p>
+      <p>Faithfulness is not dramatic. It does not usually look like one heroic moment. It looks like showing up with integrity today, and then again tomorrow, and then the day after that. That quiet faithfulness, practiced over time, is what shapes character.</p>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="post-category">Content Creation</div>
+    <h2 class="post-title">Why Every Video Needs a GPS</h2>
+    <div class="post-date">October 2026</div>
+    <div class="post-divider"></div>
+    <div class="post-body">
+      <p>Before I film anything, I ask one question: where is this video going?</p>
+      <p>Not in a physical sense — but in terms of purpose. What is the destination? What do I want the person watching to feel, think, or do by the end of it? Without a clear answer to that question, a video can be beautifully shot and still feel like it went nowhere.</p>
+      <p>I think of it like a GPS. A GPS does not just tell you to drive — it tells you exactly where you are going and recalculates if you get off track. A video without a clear purpose is like driving without a destination. You might end up somewhere interesting, but you probably wasted a lot of time getting there, and your passenger has no idea what is happening.</p>
+      <div class="highlight-box"><strong>Before You Film</strong>Start with the end. What feeling should someone have after watching? What should they know or do? Once you have that, every creative choice — visuals, music, pacing — falls into place.</div>
+      <p>For short-form content especially — Reels, TikToks, YouTube Shorts — this matters enormously. You have a few seconds to tell the viewer's brain that this video is worth staying for. If there is no clear direction in those first moments, they are gone.</p>
+      <p>When I work with clients, we always start with the end. What feeling should someone have after watching this? What should they know or do? Once we have that, the creative choices become much easier — the visuals, the music, the pacing, the call to action. Everything starts to serve the destination instead of just filling time.</p>
+      <p>A great video does not wander. It takes you somewhere on purpose.</p>
     </div>
   </article>
 
